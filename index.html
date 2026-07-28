@@ -1,43 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>My Ecommerce Application</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Header */
+        .header {
+            background-color: #2e7d32;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #1a237e;
+            padding: 12px;
+        }
+
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            color: #1a237e;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+
+        .product-card p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        .product-card button {
+            background-color: #1a237e;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .product-card button:hover {
+            background-color: #2e7d32;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2e7d32;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        audio {
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
-
 <body>
-
-    <!-- Heading -->
-    <div>
-        <h1>Welcome to My Ecommerce Application</h1>
+    <!-- Header -->
+    <div class="header">
+        <h1>My Ecommerce Store</h1>
     </div>
 
     <!-- Navigation -->
-    <div>
-        <a href="products.html">View Products</a> |
-        <a href="contact.html">Contact Us</a> |
-        <a href="about.html">About Us</a>
+    <div class="nav">
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact Us</a>
     </div>
 
-    <hr>
+    <!-- Welcome Section -->
+    <section class="main">
+        <h2>Welcome to My Ecommerce Application</h2>
+        <p>Discover and purchase your favorite products with ease.</p>
+    </section>
 
-    <!-- Main Content -->
-    <div>
-        <h2>Search for Products and Buy Here</h2>
-        <p>This web page contains books for sale.</p>
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/image-1.png" alt="Atomic Habits Book">
+                <h3>Atomic Habits</h3>
+                <p>Price: ₹499</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="images/image-2.png" alt="Running Shoes">
+                <h3>Running Shoes</h3>
+                <p>Price: ₹1299</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
+    </section>
 
-        <!-- shoe image -->
-        <img src="images/image-1.png" alt="shoe" width="250">
-        <h3>Atomic Habits</h3>
-        <p>Price: ₹499</p>
-        <button>Buy Now</button>
-    </div>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a student-driven ecommerce project created for the FEDF class. Our mission is to provide a simple, user-friendly platform where customers can explore and purchase products with ease. This application demonstrates modern web design principles and responsive layouts.</p>
+    </section>
 
-    <hr>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: Mohith@gmail.com</p>
+        <p>Phone: +91 7095482551</p>
+        <p>Address: FEDF Lab, Tadepalli, Andhra Pradesh, India</p>
+    </section>
 
     <!-- Footer -->
-    <div>
-        <p>This is an ecommerce website created for FEDF class.</p>
+    <div class="footer">
+        <p>&copy; 2026 My Ecommerce Store | Created for FEDF Class</p>
     </div>
 
+    <!-- Audio -->
+    <audio controls>
+        <source src="sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </body>
 </html>
+
+
