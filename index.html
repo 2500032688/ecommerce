@@ -1,199 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Ecommerce Application</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <title>KLECommerce</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("images/background.png") no-repeat center center fixed;
+      background-size: cover;
+    }
 
-        /* Header */
-        .header {
-            background-color: #2e7d32;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+    header {
+      background-color: #0D47A1;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
 
-        .header h1 {
-            margin: 0;
-            font-size: 2rem;
-            letter-spacing: 1px;
-        }
+    header img {
+      height: 60px;
+    }
 
-        /* Navigation */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #1a237e;
-            padding: 12px;
-        }
+    .search-bar {
+      flex: 1;
+      text-align: center;
+    }
 
-        .nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+    .search-bar input[type="text"] {
+      width: 60%;
+      padding: 8px;
+    }
 
-        .nav a:hover {
-            color: #ffeb3b;
-        }
+    .nav-links {
+      text-align: right;
+    }
 
-        /* Section Styling */
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+    .nav-links a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        section h2 {
-            color: #1a237e;
-            margin-bottom: 15px;
-        }
+    nav {
+      background-color: #1976D2;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px;
+    }
 
-        section p {
-            font-size: 1rem;
-            line-height: 1.6;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        /* Product Grid */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            padding: 20px;
-        }
+    .banner {
+      text-align: center;
+      background-color: #FFF8DC;
+    }
 
-        .product-card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
+    .banner img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+    .section-title {
+      background-color: #1565C0;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-        .product-card img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background-color: #fff;
+    }
 
-        .product-card h3 {
-            margin: 15px 0 10px;
-            font-size: 1.2rem;
-            color: #2e7d32;
-        }
+    .product-card {
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 15px;
+      background-color: #fafafa;
+    }
 
-        .product-card p {
-            margin: 5px 0;
-            font-size: 1rem;
-        }
+    .product-card img {
+      width: 170px;
+      height: 170px;
+      object-fit: cover;
+    }
 
-        .product-card button {
-            background-color: #1a237e;
-            color: #fff;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
+    .offers {
+      background-color: #FFF176;
+      text-align: center;
+      padding: 20px;
+    }
 
-        .product-card button:hover {
-            background-color: #2e7d32;
-        }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      background-color: #E8F5E9;
+      padding: 20px;
+    }
 
-        /* Footer */
-        .footer {
-            background-color: #2e7d32;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            margin-top: 30px;
-        }
+    .services h3 {
+      margin: 0;
+    }
 
-        audio {
-            display: block;
-            margin: 20px auto;
-        }
-    </style>
+    footer {
+      background-color: #263238;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <h1>My Ecommerce Store</h1>
+
+  <!-- Header -->
+  <header>
+    <img src="images/logo.png" alt="KLECommerce Logo">
+    <div class="search-bar">
+      <input type="text" placeholder="Search products...">
+      <input type="submit" value="Search">
     </div>
-
-    <!-- Navigation -->
-    <div class="nav">
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact Us</a>
+    <div class="nav-links">
+      <a href="#">Login</a> |
+      <a href="#">Register</a> |
+      <a href="#">Cart (0)</a>
     </div>
+  </header>
 
-    <!-- Welcome Section -->
-    <section class="main">
-        <h2>Welcome to My Ecommerce Application</h2>
-        <p>Discover and purchase your favorite products with ease.</p>
-    </section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Electronics</a>
+    <a href="#">Clothing</a>
+    <a href="#">Books</a>
+    <a href="#">Sports</a>
+  </nav>
 
-    <!-- Products Section -->
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="images/image-1.png" alt="Atomic Habits Book">
-                <h3>Atomic Habits</h3>
-                <p>Price: ₹499</p>
-                <button>Buy Now</button>
-            </div>
-            <div class="product-card">
-                <img src="images/image-2.png" alt="Running Shoes">
-                <h3>Running Shoes</h3>
-                <p>Price: ₹1299</p>
-                <button>Buy Now</button>
-            </div>
-        </div>
-    </section>
+  <!-- Banner -->
+  <div class="banner">
+    <img src="images/banner.png" alt="Banner">
+  </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are a student-driven ecommerce project created for the FEDF class. Our mission is to provide a simple, user-friendly platform where customers can explore and purchase products with ease. This application demonstrates modern web design principles and responsive layouts.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: Mohith@gmail.com</p>
-        <p>Phone: +91 7095482551</p>
-        <p>Address: FEDF Lab, Tadepalli, Andhra Pradesh, India</p>
-    </section>
-
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2026 My Ecommerce Store | Created for FEDF Class</p>
+  <!-- Featured Products -->
+  <div class="section-title">FEATURED PRODUCTS</div>
+  <div class="products">
+    <div class="product-card">
+      <img src="images/shirt.jpg" alt="Men's Shirt">
+      <h3>Men's Shirt</h3>
+      <h2>₹999</h2>
+      <button>Add to Cart</button>
     </div>
+    <div class="product-card">
+      <img src="images/rice.jpg" alt="Rice Bag">
+      <h3>Rice Bag</h3>
+      <h2>₹1200</h2>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="images/phone.jpg" alt="Smart Phone">
+      <h3>Smart Phone</h3>
+      <h2>₹15,999</h2>
+      <button>Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="images/washing.jpg" alt="Washing Machine">
+      <h3>Washing Machine</h3>
+      <h2>₹25,000</h2>
+      <button>Add to Cart</button>
+    </div>
+  </div>
 
-    <!-- Audio -->
-    <audio controls>
-        <source src="sound.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+  <!-- Offers -->
+  <div class="offers">
+    <h2>Today's Special Offers</h2>
+    Flat 20% Discount on Fashion Products <br><br>
+    Free Delivery Above ₹999 <br><br>
+    Buy One Get One on Selected Products <br><br>
+    Extra Cashback on Electronics
+  </div>
+
+  <!-- Services -->
+  <div class="services">
+    <h3>Easy Returns</h3>
+    <h3>24 × 7 Support</h3>
+    <h3>Secure Payment</h3>
+    <h3>Fast Delivery</h3>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h2>KLECommerce</h2>
+    <a href="#">Home</a> |
+    <a href="#">Products</a> |
+    <a href="#">About Us</a> |
+    <a href="#">Contact Us</a> |
+    <a href="#">Help</a>
+    <br><br>
+    Copyright © 2026 KLECommerce
+  </footer>
+
 </body>
 </html>
-
-
